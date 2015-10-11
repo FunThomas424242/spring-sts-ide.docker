@@ -38,22 +38,6 @@ exec { "counsyl-sys-modul":
     command => "sudo puppet module install --force counsyl-sys",
 }
 
-
-# gini-archive
-exec { "gini-archive-modul":
-    command => "sudo puppet module install --force gini-archive",
-}
-
-#
-# maestrodev
-#
-
-
-# wget 
-exec { "masestrodev-wget-modul":
-    command => "sudo puppet module install --force maestrodev-wget",
-}
-
 # git 
 exec { "git-modul":
     command => "sudo puppet module install --force maestrodev-git",
@@ -63,7 +47,7 @@ exec { "git-modul":
 # funthomas424242
 #
 
-# geppetto 
+# spring-sts 
 exec { "sts-modul":
     command => "sudo puppet module install --force funthomas424242-sts",
     path    => "/usr/local/bin/:/bin/:/usr/bin",

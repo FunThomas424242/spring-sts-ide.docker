@@ -16,7 +16,6 @@ RUN  \
   apt-get -y upgrade && \
   apt-get install -y libgtk2.0-0 libswt-gtk-3-java puppet puppetmaster
 
-
 # Replace 1000 with your user / group id 
 RUN export uid=1000 gid=1000 && \
     mkdir -p /home/developer && \
@@ -27,7 +26,7 @@ RUN export uid=1000 gid=1000 && \
     echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
     chmod 0440 /etc/sudoers.d/developer && \
     chown ${uid}:${gid} -R /home/developer
-
+ 
 USER developer 
 ENV HOME /home/developer 
 WORKDIR /home/developer
