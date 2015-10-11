@@ -46,5 +46,5 @@ RUN  \
 
 # run terminal or spring-sts
 #CMD ["/bin/bash"]
-CMD /opt/sts/STS
+CMD /home/developer/installationen/sts-bundle/sts-3.7.1.RELEASE/STS
 
