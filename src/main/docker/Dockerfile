@@ -31,20 +31,19 @@ USER developer
 ENV HOME /home/developer 
 WORKDIR /home/developer
 
-ADD import.pp git.pp spring-sts.pp /home/developer/
+ADD import.pp git.pp spring-sts.pp permissions.pp /home/developer/
 
 # install the full configuration via puppet
 RUN  \
   sudo puppet apply import.pp && \
   sudo puppet apply git.pp && \
-  sudo puppet apply spring-sts.pp 
-
-
+  sudo puppet apply spring-sts.pp && \
+  sudo puppet apply permissions.pp
 
 # attach volumes
 # VOLUME /volume/git
 
 # run terminal or spring-sts
 #CMD ["/bin/bash"]
-CMD /home/developer/installationen/sts-bundle/sts-3.7.1.RELEASE/STS
+CMD /home/developer/installationen/sts/STS
 
