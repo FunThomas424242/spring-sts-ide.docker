@@ -43,6 +43,8 @@ RUN  \
 # attach volumes
 # VOLUME /volume/git
 
+EXPOSE 8080
+
 # run terminal or spring-sts
 #CMD ["/bin/bash"]
 CMD /home/developer/installationen/sts/STS
