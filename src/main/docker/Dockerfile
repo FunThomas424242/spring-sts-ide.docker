@@ -14,7 +14,7 @@ RUN  \
   export DEBIAN_FRONTEND=noninteractive && \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y libgtk2.0-0 libswt-gtk-3-java puppet puppetmaster
+  apt-get install -y libgtk2.0-0 libswt-gtk-3-java puppet puppetmaster firefox
 
 # Replace 1000 with your user / group id 
 RUN export uid=1000 gid=1000 && \
@@ -46,6 +46,6 @@ RUN  \
 EXPOSE 8080
 
 # run terminal or spring-sts
-#CMD ["/bin/bash"]
+#CMD ["/bin/bash"] sh -c '<command1 && command2 [&& command3 [...]]>'
 CMD /home/developer/installationen/sts/STS
 
